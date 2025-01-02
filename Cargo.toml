@@ -1,0 +1,47 @@
+[package]
+name = "b_stb"
+version = "0.1.0"
+edition = "2021"
+description = "A Rust library that efficiently converts Hyper response bodies and async streams into strings or bytes"
+authors = ["Bright Andoh <bright.andohh@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/brighht/b_stb"
+documentation = "https://docs.rs/b_stb"
+readme = "README.md"
+keywords = [
+    "streaming",
+    "conversion",
+    "hyper",
+    "async",
+    "http"
+]
+categories = [
+    "network-programming",
+    "asynchronous",
+    "parsing",
+    "web-programming",
+    "encoding"
+]
+include = [
+    "src/**/*",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+    "examples/**/*"
+]
+
+[lib]
+name = "b_stb"
+path = "src/lib.rs"
+
+[dependencies]
+tokio = { version = "1.0", features = ["io-util", "rt", "rt-multi-thread", "fs"] }
+futures-util = "0.3"
+futures-core = "0.3"
+hyper = { version = "0.14", features = ["full"] }
+bytes = "1.0"
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["io-util", "rt", "rt-multi-thread", "macros", "test-util", "fs"] }
+futures = "0.3"
+hyper-tls = "0.5"

@@ -1,0 +1,14 @@
+[package]
+name = "b_stb-examples"
+version = "0.1.0"
+edition = "2021"
+
+[[example]]
+name = "full_example"
+path = "full_example.rs"
+
+[dependencies]
+b_stb = { path = ".." }
+hyper = { version = "0.14", features = ["full"] }
+hyper-tls = "0.5"
+tokio = { version = "1.0", features = ["full"] } 

@@ -1,0 +1,22 @@
+# Build directory
+/target/
+**/target/
+
+# IDE files
+.idea/
+.vscode/
+
+# Rust backup files
+**/*.rs.bk
+*.pdb
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Generated documentation
+/doc/
+/docs/
+
+# Since this is a library, we should ignore Cargo.lock
+Cargo.lock
